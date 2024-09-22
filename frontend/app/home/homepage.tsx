@@ -62,7 +62,7 @@ export default function HomePage() {
   return (
     <div className="relative">
       <Navbar />
-      <main className="pt-16 h-[100vh] w-[207vh] bg-black bg-opacity-90 flex flex-col items-center">
+      <main className="pt-16 h-[100vh] w-full bg-black bg-opacity-90 flex flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
           {projects.map((project) => (
             <div

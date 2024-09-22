@@ -8,13 +8,7 @@ export default function Navbar() {
       <div className="text-white font-bold text-xl">CrowdEther</div>
       <div className="space-x-4">
         <Link href="/login" className="text-white hover:text-green-400">
-          Login
-        </Link>
-        <Link href="/signup" className="text-white hover:text-green-400">
-          Sign Up
-        </Link>
-        <Link href="/admin-login" className="text-white hover:text-green-400">
-          Admin
+          Logout
         </Link>
       </div>
     </nav>
