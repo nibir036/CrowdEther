@@ -14,9 +14,25 @@ datasource db {
 }
 
 model User {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  email String @unique
-  password String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+
+  // Relation field
+  projects  Project[] // A user can create multiple projects
+}
+
+model Project {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  brief     String
+  detail    String
+  goal      Float     // The goal amount of the project
+  raised    Float     // The amount raised so far
+  createdAt DateTime  @default(now())
+
+  // Relation fields
+  userId    String    @db.ObjectId
+  user      User      @relation(fields: [userId], references: [id]) // Foreign key reference
 }

@@ -10,6 +10,9 @@ export default function Navbar() {
         <Link href="/login" className="text-white hover:text-green-400">
           Logout
         </Link>
+        <Link href="/project" className="text-white hover:text-green-400">
+          Create
+        </Link>
       </div>
     </nav>
   );
