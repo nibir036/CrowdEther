@@ -101,21 +101,45 @@ export default function LandingPage() {
       {/* How it works */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-white text-center mb-12">How it works</h2>
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          <div className="hidden md:block absolute top-8 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-gradient-to-r from-violet-500/30 via-pink-500/30 to-orange-500/30" />
-          {[
-            { step: "01", title: "Create your campaign", desc: "Write your story, set a funding goal, and pick a deadline. Add a cover image to stand out." },
-            { step: "02", title: "Share & spread the word", desc: "Share your campaign link with your network. Every backer brings momentum." },
-            { step: "03", title: "Watch funding grow", desc: "Track donations in real time. Hit your goal and bring your project to life." },
-          ].map(({ step, title, desc }) => (
-            <div key={step} className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-pink-500/20 border border-white/[0.08] flex items-center justify-center mx-auto mb-4">
-                <span className="gradient-text text-xl font-bold">{step}</span>
-              </div>
-              <h3 className="text-white font-semibold mb-2">{title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{desc}</p>
+        <div className="flex flex-col md:flex-row items-start justify-between gap-4">
+
+          {/* Step 1 */}
+          <div className="text-center flex-1 px-4">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-pink-500/20 border border-white/[0.08] flex items-center justify-center mx-auto mb-4">
+              <span className="gradient-text text-xl font-bold">01</span>
             </div>
-          ))}
+            <h3 className="text-white font-semibold mb-2">Create your campaign</h3>
+            <p className="text-white/50 text-sm leading-relaxed">Write your story, set a funding goal, and pick a deadline. Add a cover image to stand out.</p>
+          </div>
+
+          {/* Connector 1→2 */}
+          <div className="hidden md:flex items-center mt-8 shrink-0">
+            <div className="w-16 h-px bg-gradient-to-r from-violet-500/50 to-pink-500/50" />
+          </div>
+
+          {/* Step 2 */}
+          <div className="text-center flex-1 px-4">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-pink-500/20 border border-white/[0.08] flex items-center justify-center mx-auto mb-4">
+              <span className="gradient-text text-xl font-bold">02</span>
+            </div>
+            <h3 className="text-white font-semibold mb-2">Share & spread the word</h3>
+            <p className="text-white/50 text-sm leading-relaxed">Share your campaign link with your network. Every backer brings momentum.</p>
+          </div>
+
+          {/* Connector 2→3 */}
+          <div className="hidden md:flex items-center mt-8 shrink-0">
+            <div className="w-16 h-px bg-gradient-to-r from-pink-500/50 to-orange-500/50" />
+          </div>
+
+          {/* Step 3 */}
+          <div className="text-center flex-1 px-4">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-pink-500/20 border border-white/[0.08] flex items-center justify-center mx-auto mb-4">
+              <span className="gradient-text text-xl font-bold">03</span>
+            </div>
+            <h3 className="text-white font-semibold mb-2">Watch funding grow</h3>
+            <p className="text-white/50 text-sm leading-relaxed">Track donations in real time. Hit your goal and bring your project to life.</p>
+          </div>
+
         </div>
       </section>
 
